@@ -1,0 +1,2 @@
+# <Record Type> <Key> <Value> <TTL> <Priority for MX records>
+# CNAME login @ 3600

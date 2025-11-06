@@ -14,3 +14,4 @@ A simple tool that acts as a proxy DNS server for situations where you have an u
 ## Required modules 
 
 - dnslib 
+- asyncio 

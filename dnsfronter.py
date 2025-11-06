@@ -36,7 +36,7 @@ async def handle_query(data, addr, sock, records, deny_list):
             return
         
         request = DNSRecord.parse(data)
-        qname = str(request.q.qname)
+        qname = str(request.q.qname).lower()
         qtype = QTYPE[request.q.qtype]
         
         print("[+] Query from {}: {} {}".format(client_ip, qname, qtype))
@@ -111,8 +111,8 @@ async def main():
         
         new_record = {
             "type": split[0],
-            "name": split[1],
-            "value": split[2],
+            "name": split[1].lower(),
+            "value": split[2].replace("\s", " "),
             "ttl": int(split[3]),
         }
         

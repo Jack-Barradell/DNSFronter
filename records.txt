@@ -1,2 +1,3 @@
 # <Record Type> <Key> <Value> <TTL> <Priority for MX records>
+# Use \s for a space in record value
 # CNAME login @ 3600

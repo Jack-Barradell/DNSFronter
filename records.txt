@@ -1,3 +1,16 @@
-# <Record Type> <Key> <Value> <TTL> <Priority for MX records>
-# Use \s for a space in record value
-# CNAME login @ 3600
+# <Record Type> <Full Name> <Value> <TTL> <Extras>
+# Names are full domain names, the trailing dot is optional
+# Wrap values with spaces in quotes, or use \s for a space
+# A name starting with *. is a wildcard, the most specific wildcard wins
+#
+# A login.example.com 192.0.2.10 300
+# AAAA login.example.com 2001:db8::10 300
+# CNAME www.example.com login.example.com 3600
+# TXT example.com "v=spf1 include:_spf.example.com ~all" 3600
+# MX example.com mail.example.com 3600 10
+# SRV _sip._tcp.example.com sip.example.com 3600 10 5 5060
+# CAA example.com letsencrypt.org 3600 issue 0
+# SOA example.com ns1.example.com 3600 hostmaster.example.com 2026111101 7200 3600 1209600 300
+# A *.example.com 192.0.2.10 300
+#
+# Extras: MX <priority>, SRV <priority> <weight> <port>, CAA [tag] [flags], SOA <rname> [serial refresh retry expire minimum]

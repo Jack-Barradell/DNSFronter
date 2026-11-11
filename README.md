@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple tool that acts as a proxy DNS server for situations where you have an upstream program handling DNS but wish to insert some specific records. For example, making use of a tool such as Evilginx2 but wishing to assign additional DNS records beyond those defined in your phishlets.
+A simple tool that acts as a proxy DNS server for situations where you have an upstream program handling DNS but wish to insert some specific records. For example, making use of a tool such as Evilginx but wishing to assign additional DNS records beyond those defined in your phishlets, e.g. to setup an email domain.
 
 Queries that match a record in records.txt are answered locally, everything else is forwarded to the upstream server. If the upstream server doesn't respond the client gets a SERVFAIL.
 
